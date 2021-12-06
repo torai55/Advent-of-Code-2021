@@ -81,8 +81,8 @@ function searchingTargetInBoard(board, target) {
  * 看 board 裡面有沒有 -1 連成垂直或水平線
  * @param {number[][]} board
  * @param {Object} position
- * @param {position.x} number
- * @param {position.y} number
+ * @param {number} position.x
+ * @param {number} position.y
  * @returns {boolean} result
  */
 function getBingo(board, position) {

@@ -39,8 +39,7 @@ function partOne(vents) {
   }
 
   const count = ventMap.flat().reduce((accu, position) => {
-    if (position >= 2) return accu + 1
-    return accu
+    return position >= 2 ? accu + 1 : accu
   }, 0)
   return count
 }
@@ -82,8 +81,7 @@ function partTwo(vents) {
   }
 
   const count = ventMap.flat().reduce((accu, position) => {
-    if (position >= 2) return accu + 1
-    return accu
+    return position >= 2 ? accu + 1 : accu
   }, 0)
   return count
 }

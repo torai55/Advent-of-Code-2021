@@ -26,7 +26,7 @@ function partOne(vents) {
   const ventMap = new Array(xMax + 1).fill(0).map((_) => new Array(yMax + 1).fill(0))
   const horizontalAndVerticalVents = vents.filter((vent) => vent.from.x === vent.to.x || vent.from.y === vent.to.y)
 
-  for (let vent of horizontalAndVerticalVents) {
+  for (const vent of horizontalAndVerticalVents) {
     const xMax = Math.max(vent.from.x, vent.to.x)
     const xMin = Math.min(vent.from.x, vent.to.x)
     const yMax = Math.max(vent.from.y, vent.to.y)
@@ -53,7 +53,7 @@ function partTwo(vents) {
   const horizontalAndVerticalVents = vents.filter((vent) => vent.from.x === vent.to.x || vent.from.y === vent.to.y)
   const diagonalVents = vents.filter((vent) => Math.abs(vent.from.x - vent.to.x) === Math.abs(vent.from.y - vent.to.y))
 
-  for (let vent of horizontalAndVerticalVents) {
+  for (const vent of horizontalAndVerticalVents) {
     const xMax = Math.max(vent.from.x, vent.to.x)
     const xMin = Math.min(vent.from.x, vent.to.x)
     const yMax = Math.max(vent.from.y, vent.to.y)
@@ -65,7 +65,7 @@ function partTwo(vents) {
     }
   }
 
-  for (let vent of diagonalVents) {
+  for (const vent of diagonalVents) {
     const stepX = vent.from.x - vent.to.x < 0 ? 1 : -1
     const stepY = vent.from.y - vent.to.y < 0 ? 1 : -1
     let currX = vent.from.x

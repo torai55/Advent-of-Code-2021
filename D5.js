@@ -65,8 +65,8 @@ function partTwo(vents) {
   }
 
   for (const vent of diagonalVents) {
-    const stepX = vent.from.x - vent.to.x < 0 ? 1 : -1
-    const stepY = vent.from.y - vent.to.y < 0 ? 1 : -1
+    const stepX = vent.from.x < vent.to.x ? 1 : -1
+    const stepY = vent.from.y < vent.to.y ? 1 : -1
     let currX = vent.from.x
     let currY = vent.from.y
     while (1) {
